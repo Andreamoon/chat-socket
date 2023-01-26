@@ -5,7 +5,7 @@
   "main": "server/server.js",
   "scripts": {
     "start": "./node_modules/.bin/netlify-lambda serve server/server.js",
-    "build": "./node_modules/.bin/netlify-lambda build server/server.js",
+    "build-app": "./node_modules/.bin/netlify-lambda build server/server.js",
     "start-dev": "node server/server.js",
     "test": "mocha server/**/*.test.js",
     "test-watch": "nodemon --exec npm test "
