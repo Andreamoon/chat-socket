@@ -4,14 +4,11 @@
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "start": "netlify-lamba serve server/server.js",
-    "build-app": "netlify-lamba build  server/server.js",
-    "start-dev": "node server/server.js",
+    "start": "node server/server.js",
+    "build": "rm -rf dist && babel server -d dist",
+    "serve": "node dist/server.js",
     "test": "mocha server/**/*.test.js",
     "test-watch": "nodemon --exec npm test "
-  },
-  "engines": {
-    "node": "6.2.2"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +16,10 @@
     "express": "^4.14.0",
     "i": "^0.3.6",
     "moment": "^2.19.1",
-    "socket.io": "^1.4.8"
+    "socket.io": "^1.4.8",
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2"
   },
   "devDependencies": {
     "expect": "^1.20.2",
